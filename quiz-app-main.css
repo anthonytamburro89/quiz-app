@@ -1,0 +1,12 @@
+body {
+    display: flex;
+  }
+  fieldset{
+      display:block;
+  }
+form{
+    display:block;
+}
+input + label {
+    display: inline-block;
+    }

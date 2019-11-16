@@ -1,0 +1,119 @@
+<!-- This is the wireframe for the html that should show up once the quiz has begin
+and a question is being asked. I input an actual question to help visualize the layout-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canadian Geography Quiz App</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Canadian Geography Quiz</h1>
+        </div>
+    </header>
+    <main>
+        <section class = "question-of-total"><h2>Question 1 of 10</h2>
+        </section>
+        <fieldset>
+            <div>
+                <legend class = 'question-1-legend'>Ontario, Erie, Michigan, Huron, and Superior are each the name of...</legend>
+            </div>
+            <form class = "question-options">
+                    <input type="radio" name="options" id="option1" value="One of the 5 Northern Territories" tabindex="1">
+                    <label for = "option1">One of the "5 Northern Territories"</label>
+                    <input type="radio" name="options" id="option2" value="One of the 5 West Provinces" tabindex="2">
+                    <label for = "option2">One of the "5 West Provinces"</label>
+                    <input type="radio" name="options" id="option3" value="One of the 5 Great Rivers of Canada" tabindex="3">
+                    <label for = "option3">One of the "5 Great Rivers of Canada"</label>
+                    <input type="radio" name="options" id="option4" value="One of the 5 Great Lakes" tabindex="4">
+                    <label for = "option4">One of the "5 Great Lakes"</label>
+            </form>
+            <div>
+                <button type = "submit" id = "answer">Submit</button>
+            </div>
+        </fieldset>
+        <section class = "score-of-total"><h2>1 Correct</h2>
+        </section>
+    </main>
+</body>
+</html>
+
+
+<!-- The next view is going to be used once a question has been answered, the jquery 
+    will help decide which class of legend, and div to house a background image and houseing formatting-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canadian Geography Quiz App</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Canadian Geography Quiz</h1>
+        </div>
+    </header>
+    <main>
+        <section class = "question-of-total"><h2>Question 1 of 10</h2>
+        </section>
+        <fieldset>
+            <div>
+                <legend class = 'legend-correct-answer'>Great job eh! You answered correctly!</legend>
+                <legend class = 'legend-incorrect-answer'>Sorry! You answered incorrectly!</legend>
+            </div>
+            <div class = 'correct-answer-background'></div>
+            <div class = 'incorrect-answer-background'></div>
+            <div>
+                <button type = "button" id = "next-button">Next Question</button>
+            </div>
+        </fieldset>
+        <section class = "score-of-total"><h2>1 Correct</h2>
+        </section>
+    </main>
+</body>
+</html>
+
+<!-- The next HTML wireframe should show the elements to be present once the quiz has finished. There
+will be an -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canadian Geography Quiz App</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Canadian Geography Quiz</h1>
+        </div>
+    </header>
+    <main>
+        <section class = "quiz-complete-banner"><h2>Quiz Complete!</h2>
+        </section>
+        <fieldset>
+            <div>
+                <legend class = 'legend-correct-answer'>Great job eh! You answered correctly!</legend>
+                <legend class = 'legend-incorrect-answer'>Sorry! You answered incorrectly!</legend>
+            </div>
+            <div class = '0-3correct-background'>Come on,<span class = 'final-score'>${}</span> out of 10? That's 'Dam' bad</div>
+            <div class = '4-6-correct-background'>Well,<span class = 'final-score'>${}</span> out of 10 means you played, but did not conquer...</div>
+            <div class = '7-9-correct-background'>Nice work!<span class = 'final-score'>${}</span> is a great score, keep up the hard work!</div>
+            <div class = '10-correct-background'>Beauty!<span class = 'final-score'>${}</span> out of 10! Go Leafs Go!</div>
+            <div>
+                <button type = "button" id = "restart-button">Restart Quiz</button>
+            </div>
+        </fieldset>
+        <section class = "thank-you-section"><h2>Thanks for playing!</h2>
+        </section>
+    </main>
+</body>
+</html>
