@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Canadian Geography Quiz App</title>
+    <link href="quiz-app-main.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <header>
         <div>
             <h1>Canadian Geography Quiz</h1>
         </div>
+      <section id = 'quiz-score'></section>
     </header>
     <main>
-        <section class = "question-and-score">
-        </section>
+        <section id='question-number-score'></section>
         <fieldset>
             <div>
                 <legend>Oh Canada!</legend>
@@ -25,5 +26,8 @@
             </div>
         </fieldset>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="quiz-app-STORE.js"></script>
+    <script src="quiz-app.js"></script>
 </body>
 </html>
