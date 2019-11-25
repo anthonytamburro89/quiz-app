@@ -1,8 +1,19 @@
 
 html{
     text-align: center;
+    background: url(Can-Geo-imgs/blue-sky.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
 }
 
+header{
+    background-color: #f5f5f587;
+    font-weight: bold;
+    border-radius: 40px;
+    padding: 2%;
+    margin: 5%;
+}
 
     #welcome-page{
         border: solid #3975a8 3px;
@@ -123,6 +134,14 @@ margin-right:5px;
     padding: 3%;
 }
 
+label:hover{
+    font-size:110%;
+}
+
+input:checked {
+    margin-left: 25px;
+  }
+
 button{
     padding: 1%;
     border-radius: 7px;
@@ -135,9 +154,19 @@ button#begin{
     border-color: #3975a8 ;
 }
 
+button#begin:hover {
+    background-color: #3975a8;
+    color: whitesmoke;
+}
+
 button#answer{
     background-color: #7d9ed4;
     border-color: #1b4780;
+}
+
+button#answer:hover {
+    background-color: #1b4780;
+    color: whitesmoke;
 }
 
 button#next-question{
@@ -145,14 +174,38 @@ button#next-question{
     border-color: #8a786e;
 }
 
+button#next-question:hover {
+    background-color: #8a786e;
+    color: whitesmoke;
+}
+
 button#restart{
     background-color: #e79c96;
     border-color: #ffffff;
 }
 
-/*
-font-size: 110%;
-background: #048b1b96;
-border-radius: 7px;
-margin: 0px 0px 0px 5%;
-    */
+button#restart:hover {
+    background-color: #d52b1e;
+    color: whitesmoke;
+}
+
+
+@media only screen and (min-width: 640px){
+
+    html{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size:150%;
+    }
+
+
+    body{
+        width:80%;
+    }
+
+    button{
+        font-size:125%;
+    }
+}
+

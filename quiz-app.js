@@ -5,12 +5,17 @@ function startQuiz() {
   );
 }
 
+/*iterates through STORE object to find out the number of the question we are on relative to the questions
+array. displays the current question out of total and score out of total*/
+
 function updateQuestionAndScore() {
     const html = $(`
         <div id="question-of-total">Questions Number: ${STORE.currentQuestion + 1}/${STORE.questions.length}</div>
         <div id="question-score">Score: ${STORE.score}/${STORE.questions.length}</div>`);
     $("#quiz-score").html(html);
     }
+
+/*iterates through Questions array, displaying the next option until array has reached the final question*/
 
   function updateOptions(){
   let question = STORE.questions[STORE.currentQuestion];
@@ -22,7 +27,9 @@ function updateQuestionAndScore() {
         <span id="js-r${i+1}"></span>`);
   }
 }
-  
+  /*Pulls up the question form showing question in legend and 4 possible answer inputs
+  submit button prepared*/
+
   function renderAQuestion() {
     let question = STORE.questions[STORE.currentQuestion];
     updateQuestionAndScore();
@@ -43,11 +50,10 @@ function updateQuestionAndScore() {
   $("#next-question").hide();
   }
 
-  /*checks whether the chosen option is right or wrong and displays respective message
-  When I make the action, on(click) on lin 50, the fucntion partially works.. submit is not working
-  
-  
-  */ 
+
+  /* checks to see if an option has been selected, and then checks to see if it matches correct answer
+  or not. If answer is incorrect, handles correct response, incorrect, handles incorrect and give correct answer.*/
+
   function handleSelectOption() {
     $('body').on("submit",'#question-form', function(event) {
       event.preventDefault();
@@ -78,7 +84,7 @@ function updateQuestionAndScore() {
     });
   }
 
-/* displays results and restart quiz button */
+/* Results and restart page, canada flag background */
 function displayResults() {
     let resultHtml = $(
       `<form id="restart-quiz">
@@ -104,6 +110,7 @@ function displayResults() {
     });
   }
   
+  /*restarts the render a question process upon clicking restart button*/
   
   function restartQuiz() {
     $('body').on('click','#restart', (event) => {
