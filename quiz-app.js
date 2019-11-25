@@ -28,7 +28,7 @@ function updateQuestionAndScore() {
     updateQuestionAndScore();
     const questionHtml = $(`
     <form id='question-form'>
-    <fieldset>
+    <fieldset id='quiz-in-process'>
      <legend>${question.question}</legend>
      <div id='present-question'></div>
     <section class='next-question-button'>
@@ -62,11 +62,11 @@ function updateQuestionAndScore() {
       $('span').removeClass("right-answer wrong-answer");
       if(selectedOption === currentQues.answer) {
         STORE.score++; 
-        $(`${id}`).append(`Great job eh! You answered correctly!<br/>`);
+        $(`${id}`).append(`Great job eh! You are correct!<br/>`);
         $(`${id}`).addClass("right-answer");
       }
       else {
-        $(`${id}`).append(`Sorry! You answered incorrectly! <br/> The answer is "${currentQues.answer}"<br/>`);
+        $(`${id}`).append(`Sorry! You answered incorrectly! The answer is "${currentQues.answer}"<br/>`);
         $(`${id}`).addClass("wrong-answer");
       }
   
@@ -81,23 +81,17 @@ function updateQuestionAndScore() {
 /* displays results and restart quiz button */
 function displayResults() {
     let resultHtml = $(
-      `<div class="results">
-        <form id="js-restart-quiz">
-          <fieldset>
-            <div class="row">
-              <div class="col-12">
-                <legend>Your Score is: ${STORE.score}/${STORE.questions.length}</legend>
+      `<form id="restart-quiz">
+          <fieldset id='restart-bg'>
+              <div>
+                <h2 id='final-score'>Your Score is: ${STORE.score}/${STORE.questions.length}</h2>
               </div>
-            </div>
           
-            <div class="row">
-              <div class="col-12">
+             <div>
                 <button type="button" id="restart"> Restart Quiz </button>
-              </div>
             </div>
           </fieldset>
-      </form>
-      </div>`);
+      </form>`);
       STORE.currentQuestion = 0;
       STORE.score = 0;
     $("main").html(resultHtml);

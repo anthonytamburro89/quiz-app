@@ -1,19 +1,158 @@
 
-/*
-main {
+html{
+    text-align: center;
+}
+
+
+    #welcome-page{
+        border: solid #3975a8 3px;
+        padding: 3%;
+        border-radius: 7px;
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        position: relative;
+        text-align:left;
+        background: url(Can-Geo-imgs/Canada-quiz-background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    #quiz-in-process{
+        border: solid #1b4780 3px;
+        padding: 3%;
+        border-radius: 7px;
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        position: relative;
+        text-align:left;
+        background: url(Can-Geo-imgs/quiz-process-bg-image.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    #restart-bg{
+        border: solid #000000 3px;
+        padding: 3%;
+        border-radius: 7px;
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        position: relative;
+        text-align:left;
+        background: url(Can-Geo-imgs/FlagCanada.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    .fade-background {
+        background-color: #f5f5f5b3;
+        border-radius: 7px;
+        margin: 1%;
+        padding: 2%;
+    }
+
+    #begin-screen{
+        margin-top:0px;
+    }
+
+legend{
+    background-color: #18467d;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+div{
+    margin-bottom: 2%;
+}
+
+#quiz-score{
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+
+#question-of-total + #question-score{
+margin-right:5px;
+}
+
+#js-r{
+    border: black solid 2px;
+}
+
+#present-question {
+    background-color: #f5f5f580;
+    border-radius: 7px;
+}
+
+.right-answer{
+    font-size: 110%;
+    background: #048b1b96;
+    border-radius: 7px;
+    padding-left: 1%;
+    padding-right: 1%;
     display: block;
 }
 
-body {
-    display: flex;
-  }
-  fieldset{
-      display:block;
-  }
-form{
-    display:block;
+.wrong-answer{
+    font-size: 110%;
+    background: #ff2d2d96;
+    border-radius: 7px;
+    padding-left: 1%;
+    padding-right: 1%;
+    display: block;
 }
-input + label {
-    display: inline-block;
-    }
-*/
+
+#final-score{
+    background-color: #f5f5f58f;
+    border-radius: 7px;
+    padding: 2%;
+    border: red solid 2px;
+}
+
+#welcome-sentence{
+    font-weight: bolder;
+    background-color: #feb2b2c2;
+    border-radius: 7px;
+    padding: 3%;
+}
+
+button{
+    padding: 1%;
+    border-radius: 7px;
+    font-weight: bold;
+    border: solid  2px;
+}
+
+button#begin{
+    background-color: #bdd4ec;
+    border-color: #3975a8 ;
+}
+
+button#answer{
+    background-color: #7d9ed4;
+    border-color: #1b4780;
+}
+
+button#next-question{
+    background-color: #dbcfc3;
+    border-color: #8a786e;
+}
+
+button#restart{
+    background-color: #e79c96;
+    border-color: #ffffff;
+}
+
+/*
+font-size: 110%;
+background: #048b1b96;
+border-radius: 7px;
+margin: 0px 0px 0px 5%;
+    */
